@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Clock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="clock-container">
+    <h1>MSA CODER Clock</h1>
+
+    <!-- Digital Clock -->
+    <div id="digital-clock" class="clock">
+      <h2>Digital Clock</h2>
+      <p id="digital-time">00:00:00</p>
+    </div>
+
+    <!-- Analog Clock -->
+    <div id="analog-clock" class="clock">
+      <h2>Analog Clock</h2>
+      <div class="clock-face">
+        <div id="hour-hand" class="hand hour-hand"></div>
+        <div id="minute-hand" class="hand minute-hand"></div>
+        <div id="second-hand" class="hand second-hand"></div>
+      </div>
+    </div>
+
+    <!-- Change Time -->
+    <div class="time-input">
+      <label for="new-time">Set Time:</label>
+      <input type="time" id="new-time">
+      <button id="set-time-btn">Set Time</button>
+    </div>
+
+    <!-- Toggle View -->
+    <button id="toggle-view-btn">Toggle View</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

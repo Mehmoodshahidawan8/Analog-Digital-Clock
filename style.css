@@ -1,0 +1,146 @@
+/* style.css */
+
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #ff00cc, #ffcc00, #33cc33, #00ccff);
+    background-size: 400% 400%;
+    animation: disco-background 10s ease infinite;
+    color: white;
+  }
+  
+  @keyframes disco-background {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 50% 50%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Clock Container */
+  .clock-container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #ffcc00;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .clock {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: #ff00cc;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ff66cc;
+    transform: scale(1.1);
+  }
+  
+  #digital-time {
+    font-size: 3rem;
+    color: #ffcc00;
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00;
+  }
+  
+  /* Analog Clock */
+  .clock-face {
+    width: 150px;
+    height: 150px;
+    border: 10px solid #fff;
+    border-radius: 50%;
+    position: relative;
+    margin: 20px auto;
+    background-color: transparent;
+  }
+  
+  .hand {
+    position: absolute;
+    background-color: #ff00cc;
+    width: 4px;
+    top: 50%;
+    left: 50%;
+    transform-origin: 100%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  .hour-hand {
+    height: 50px;
+    background-color: #ffcc00;
+  }
+  
+  .minute-hand {
+    height: 60px;
+    background-color: #33cc33;
+  }
+  
+  .second-hand {
+    height: 70px;
+    background-color: #00ccff;
+  }
+  
+  .time-input {
+    margin-top: 20px;
+  }
+  
+  input[type="time"] {
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #ffcc00;
+  }
+  
+  .time-input button {
+    margin-top: 10px;
+    background-color: #33cc33;
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 600px) {
+    .clock-container {
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    #digital-time {
+      font-size: 2rem;
+    }
+  
+    .clock-face {
+      width: 120px;
+      height: 120px;
+    }
+  
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+    }
+  }
+  
